@@ -10,6 +10,7 @@ export class AuthService {
   ) {}
 
   async validateUser(email: string, password: string): Promise<any> {
+    // TODO: password is not encrypted
     const user = await this.usersService.authenticate(email, password);
 
     if (user) {
